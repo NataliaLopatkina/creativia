@@ -1,0 +1,162 @@
+.slider-box {
+    background: url("../img/background/background-slider.jpg") center;
+    margin-top: -3px; 
+}
+
+.slider {
+    width: 1170px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    min-height: 633px;
+
+    &__item {
+        -webkit-animation-name: fade;
+        -webkit-animation-duration: 1.5s;
+        animation-name: fade;
+        animation-duration: 1.5s;
+    }
+
+    &__item-content {
+        position: absolute;
+        left: 50%;
+        top: 48%;
+        transform: translate(-50%, -50%);
+        max-width: 1030px;
+        width: 100%;
+    }
+
+    &__title {
+        margin-top: 0;
+        margin-bottom: 40px;
+    }
+
+    &__text {
+        font-weight: 400;
+        margin-top: 0;
+        margin-bottom: 45px;
+    }
+
+    &__link {
+        display: inline-block;
+        padding: 14px 35px;
+        margin-right: 30px;
+        min-width: 100px;
+        text-align: center;
+
+        &:last-child {
+            margin: 0;
+        }
+    }
+
+    &__slide-prev,
+    &__slide-next {
+        cursor: pointer;
+        position: absolute;
+        top: 48%;
+        margin-top: -15px;
+        padding: 16px;
+        color: #a4a4a4;
+        font-size: 30px;
+        font-weight: bold;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+
+        &:hover {
+            color: #ff0036;
+        }
+    }
+
+    &__slide-prev {
+        left: -60px;
+    }
+
+    &__slide-next {
+        right: -60px;
+    }
+}
+
+// Aniamtion slider
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+@media (max-width: 1350px) {
+    .slider {
+        &__slide-next {
+            right: 0;
+            padding: 0;
+            top: 35%;
+        }
+
+        &__slide-prev {
+            left: 0;
+            padding: 0;
+            top: 35%;
+        }
+    }
+}
+
+@media (max-width: 1180px) {
+    .slider {
+        width: 1160px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+@media (max-width: 1170px) {
+    .slider {
+        width: 680px;
+        padding-left: 10px;
+        padding-right: 10px;
+
+        &__text {
+            max-width: 680px;
+        }
+    }
+}
+
+@media (max-width: 700px) {
+    .slider {
+        width: 300px;
+        min-height: 500px;
+
+        &__slide-prev {
+            top: 16%;
+        }
+
+        &__slide-next {
+            top: 16%;
+        }
+
+        &__text {
+            margin-bottom: 20px;
+        }
+
+        &__link {
+            margin-right: 0;
+            margin-bottom: 30px;
+        }
+    }
+}
+
+
+
+
+

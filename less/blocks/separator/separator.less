@@ -1,0 +1,40 @@
+.separator {
+    position: relative;
+    width: 1170px;
+    margin: 0 auto;
+    margin-bottom: 103px;
+
+    &__line {
+        width: 520px;
+        height: 1px;
+        margin: 0 auto;
+        background: #262626;
+        display: block;
+    }
+
+    &__img {
+        position: absolute;
+        width: 21px;
+        height: 19px;
+        top: -9px;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+}
+
+@media (max-width: 1170px) {
+    .separator {
+        width: 680px;
+    }
+}
+
+@media (max-width: 700px) {
+    .separator {
+        width: 300px;
+
+        &__line {
+            width: 300px;
+        }
+    }
+}

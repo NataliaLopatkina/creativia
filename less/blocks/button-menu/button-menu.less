@@ -1,0 +1,71 @@
+.button-menu {
+    display: none;
+    border: none;
+    background: none;
+    outline: none;
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+    position: relative;
+
+    &--open {
+        .button-menu__icon {
+            width: 25px;
+            background: #ffffff;
+            height: 2px;
+            display: block;
+            position: absolute;
+            left: 0;
+
+            &:before {
+                position: absolute;
+                content: "";
+                width: 25px;
+                background: #ffffff;
+                height: 2px;
+                display: block;
+                top: -7px;
+            }
+
+            &:after {
+                position: absolute;
+                content: "";
+                width: 25px;
+                background: #ffffff;
+                height: 2px;
+                display: block;
+                top: 7px;
+            }
+        }
+    }
+
+    &--close {
+        .button-menu__icon {
+            width: 25px;
+            background: #ffffff;
+            height: 2px;
+            display: block;
+            position: absolute;
+            left: 0;
+            transform: rotate(45deg);
+
+            &:before {
+                position: absolute;
+                content: "";
+                width: 25px;
+                background: #ffffff;
+                height: 2px;
+                display: block;
+                top: 0px;
+                transform: rotate(-90deg);
+            }
+        }
+    }
+}
+
+@media (max-width: 1170px) {
+    .button-menu {
+        display: block;
+        margin-left: auto;
+    }
+}

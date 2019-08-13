@@ -1,0 +1,28 @@
+.description {
+    display: flex;
+    margin-bottom: 101px;
+
+    &__text {
+        font-weight: 400;
+        max-width: 570px;
+        text-align: justify;
+        letter-spacing: -0.1px;
+        margin-top: 0;
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 1170px) {
+    .description {
+        flex-direction: column;
+        margin-bottom: 30px;
+
+        &__text {
+            max-width: 680px;
+        }
+        
+        &__img {
+            width: 100%;
+        }
+    }
+}
